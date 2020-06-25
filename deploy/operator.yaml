@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kafka-operator
+  namespace: ops-middleware
 spec:
   replicas: 1
   selector:
@@ -16,7 +17,7 @@ spec:
       containers:
         - name: kafka-operator
           # Replace this with the built image name
-          image: REPLACE_IMAGE
+          image: riet/kafka-operator
           command:
           - kafka-operator
           imagePullPolicy: Always
