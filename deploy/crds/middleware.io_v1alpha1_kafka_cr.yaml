@@ -1,0 +1,30 @@
+apiVersion: middleware.io/v1alpha1
+kind: Kafka
+metadata:
+  name: kafka
+  namespace: ops-middleware
+spec:
+  # Add fields here
+  tag: 2.12-2.0.0 # support 2.12-2.0.0 and 2.12-1.1.1
+  kafkaVersion: 2.0.0
+  servers: 3 # odd num, support update
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
+    limits:
+      cpu: 200m
+      memory: 512Mi
+  # storage，optional
+  # storageClass: alicloud-nas
+  # storageSize: 5Gi
+  # expose prometheus metrics
+  metrics: true
+  # jvm head，optional, if empty, adjust with limits.memory
+  # Heap: "-Xmx1024M -Xms1024M"
+  # zookeeper address
+  zookeeper: zookeeper-0.zookeeper:2181,zookeeper-1.zookeeper:2181,zookeeper-2.zookeeper:2181
+  # topic default partitions num，support update
+  numPartitions: 3
+  # log retain hour，support update
+  logRetentionHours: 24
