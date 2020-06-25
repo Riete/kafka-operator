@@ -22,7 +22,7 @@ kubectl apply -f deploy/role_binding.yaml
 kubectl apply -f deploy/operator.yaml # replace image
 ```
 
-### deploy redis-cluster
+### deploy kafka
 ```
 kubectl apply -f deploy/crds/middleware.io_v1alpha1_kafka_cr.yaml
 ```
