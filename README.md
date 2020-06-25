@@ -1,9 +1,10 @@
-### kubernetes zookeeper operator
+### kubernetes kafka operator
 
 * operator-sdk version: v0.18.1
 * kubernetes: v1.14+
 * go version: v1.13+
 * docker version: 17.03+
+* kafka version: 2.12-2.0.0, 2.12-1.1.1
 
 
 ### build 
