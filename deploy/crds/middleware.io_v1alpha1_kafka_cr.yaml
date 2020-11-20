@@ -21,7 +21,7 @@ spec:
   # expose prometheus metrics
   metrics: true
   # jvm head，optional, if empty, adjust with limits.memory
-  # Heap: "-Xmx1024M -Xms1024M"
+  # heap: "-Xmx1024M -Xms1024M"
   # zookeeper address
   zookeeper: zookeeper-0.zookeeper:2181,zookeeper-1.zookeeper:2181,zookeeper-2.zookeeper:2181
   # topic default partitions num，support update
